@@ -1,0 +1,81 @@
+*, *:before, *:after {
+  /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+  -webkit-box-sizing: border-box; 
+
+  /* Firefox (desktop or Android) 28- */
+  -moz-box-sizing: border-box;
+
+  /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+  box-sizing: border-box;
+}
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
+.wrapper{
+	width: 800px;
+	margin: 20px auto;
+	border: 2px solid black;
+}
+.header{
+	border-bottom: 2px solid black;
+}
+.happy-face-logo{
+	border-right: 2px solid black;
+	padding: 20px;
+	margin-right: 70px;
+}
+.happy-face-logo img{
+	width: 100px;
+}
+.ng-logo{
+	width: 250px;
+	margin-left: 80px;
+}
+.tag-line{
+	font-size: 4em;
+	margin: 0;
+}
+.interaction{
+	padding: 10px;
+	border-bottom: 2px solid black;
+}
+.info{
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
+.info input{
+	margin: 5px;
+	padding: 5px;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+.content{
+	margin-top: 20px;
+	padding: 10px 50px;
+	font-size: 18px;
+}
+.content span{
+	color: red;
+}
+.content .name{
+	text-transform: capitalize;
+}
+
+

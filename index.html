@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MadLibs App - Israel Bautista</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="happy-face-logo left">
+				<img src="mad-lib-happy-face.png" alt="md libs logo">
+			</div>
+			<div class="main-logo">
+				<img class="ng-logo"src="ng-mad-libs-logo.png" alt="ng madlibs logo">
+				<h1 class="tag-line clearfix">Automate This!</h1>
+			</div>
+		</div>
+		<form action="#" class="interaction">
+			<h2>Provide the following words:</h2>
+			<div class="info">
+				<input type="text" placeholder="female name"         ng-model="name"               required="">
+				<input type="text" placeholder="Job Title"           ng-model="jobTitle"           required="">
+				<input type="text" placeholder="Tedious task"        ng-model="tediousTask"        required="">
+				<input type="text" placeholder="Dirty task"          ng-model="dirtyTask"          required="">
+				<input type="text" placeholder="Celebrity"           ng-model="celebrity"          required="">
+				<input type="text" placeholder="Useless skill"       ng-model="uselessSkill"       required="">
+				<input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiousCelebrity" required="">
+				<input type="text" placeholder="Huge number"         ng-model="hugeNumber"         required="">
+				<input type="text" placeholder="Adjective"           ng-model="adjective"          required="">
+			</div>
+		</form>
+		<div class="content">
+			<p>
+				<span class="name">{{name}}</span> was a <span>{{jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span class="name">{{name}}</span> met with her life mentor <span class="name">{{celebrity}}</span> who told her to learn how to <span>{{uselessSkill}}</span> with Thinkful. 
+				<br>
+				Thinkful didn't offer a course on <span>{{uselessSkill}}</span> so she studied programming instead.
+			</p> 
+ 			<p>
+				What a great decision! With her new skills, <span class="name">{{name}}</span> built a(n) <span>{{adjective}}</span> robot named <span class="name">{{obnoxiousCelebrity}}</span> that not only loved <span>{{dirtyTask}}</span> but did it <span>{{hugeNumber | number}}</span> times faster. 
+			</p>
+		</div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
