@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="myApp">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper" ng-controller="LibsCtrl">
 		<div class="header">
 			<div class="happy-face-logo left">
 				<img src="mad-lib-happy-face.png" alt="md libs logo">
@@ -21,7 +21,7 @@
 		<form action="#" class="interaction">
 			<h2>Provide the following words:</h2>
 			<div class="info">
-				<input type="text" placeholder="female name"         ng-model="name"               required="">
+				<input type="text" placeholder="female name"         ng-model="firstName"               required="">
 				<input type="text" placeholder="Job Title"           ng-model="jobTitle"           required="">
 				<input type="text" placeholder="Tedious task"        ng-model="tediousTask"        required="">
 				<input type="text" placeholder="Dirty task"          ng-model="dirtyTask"          required="">
@@ -34,16 +34,17 @@
 		</form>
 		<div class="content">
 			<p>
-				<span class="name">{{name}}</span> was a <span>{{jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span class="name">{{name}}</span> met with her life mentor <span class="name">{{celebrity}}</span> who told her to learn how to <span>{{uselessSkill}}</span> with Thinkful. 
+				<span class="name">{{firstName}}</span> was a <span>{{jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span class="name">{{firstName}}</span> met with her life mentor <span class="name">{{celebrity}}</span> who told her to learn how to <span>{{uselessSkill}}</span> with Thinkful. 
 				<br>
 				Thinkful didn't offer a course on <span>{{uselessSkill}}</span> so she studied programming instead.
 			</p> 
  			<p>
-				What a great decision! With her new skills, <span class="name">{{name}}</span> built a(n) <span>{{adjective}}</span> robot named <span class="name">{{obnoxiousCelebrity}}</span> that not only loved <span>{{dirtyTask}}</span> but did it <span>{{hugeNumber | number}}</span> times faster. 
+				What a great decision! With her new skills, <span class="name">{{firstName}}</span> built a(n) <span>{{adjective}}</span> robot named <span class="name">{{obnoxiousCelebrity}}</span> that not only loved <span>{{dirtyTask}}</span> but did it <span>{{hugeNumber | number}}</span> times faster. 
 			</p>
 		</div>
 	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
