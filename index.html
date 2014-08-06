@@ -8,40 +8,52 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body ng-cloak class="ng-cloak">
-	<div class="wrapper" ng-controller="LibsCtrl">
+	<div class="wrapper">
 		<div class="header">
 			<div class="happy-face-logo left">
 				<img src="mad-lib-happy-face.png" alt="md libs logo">
 			</div>
 			<div class="main-logo">
-				<img class="ng-logo"src="ng-mad-libs-logo.png" alt="ng madlibs logo">
+				<img class="ng-logo" src="ng-mad-libs-logo.png" alt="ng madlibs logo">
 				<h1 class="tag-line clearfix">Automate This!</h1>
 			</div>
 		</div>
-		<form action="#" class="interaction">
-			<h2>Provide the following words:</h2>
-			<div class="info">
-				<input type="text" placeholder="female name"         ng-model="firstName"               required="">
-				<input type="text" placeholder="Job Title"           ng-model="jobTitle"           required="">
-				<input type="text" placeholder="Tedious task"        ng-model="tediousTask"        required="">
-				<input type="text" placeholder="Dirty task"          ng-model="dirtyTask"          required="">
-				<input type="text" placeholder="Celebrity"           ng-model="celebrity"          required="">
-				<input type="text" placeholder="Useless skill"       ng-model="uselessSkill"       required="">
-				<input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiousCelebrity" required="">
-				<input type="text" placeholder="Huge number"         ng-model="hugeNumber"         required="">
-				<input type="text" placeholder="Adjective"           ng-model="adjective"          required="">
+		<!-- FORM -->
+		<form class="interaction" ng-controller="LibsCtrl" ng-submit='submitted=true; submit();' name="myForm">
+			<!-- Form Inputs -->
+			<div ng-hide="formInputs">
+				<h2>Provide the following words:</h2>
+				<div class="info">
+					<!-- Not sure what I'm a doing wrong that I can't connect my model to the correct scope -->
+					<!-- <input type="text" ng-repeat="word in words" placeholder="{{word.placeholder}}" ng-model="word[0]"> -->
+
+					<!-- This is what I originally had, so now I'm trying to grab the contents from the object  -->
+					<input type="text" placeholder="female name"         ng-model="data.firstName"           name="myName" 					required="">
+					<input type="text" placeholder="Job Title"           ng-model="data.jobTitle"            name="myJobTitle" 			required="">
+					<input type="text" placeholder="Tedious task"        ng-model="data.tediousTask"         name="myTediousTask"		required="">
+					<input type="text" placeholder="Dirty task"          ng-model="data.dirtyTask"           name="myDirtyTask" 		required="">
+					<input type="text" placeholder="Celebrity"           ng-model="data.celebrity"           name="myCelebrity" 		required="">
+					<input type="text" placeholder="Useless skill"       ng-model="data.uselessSkill"        name="myUselessSkill" 	required="">
+					<input type="text" placeholder="Obnoxious celebrity" ng-model="data.obnoxiousCelebrity"  name="myOC" 						required="">
+					<input type="number" placeholder="Huge number"       ng-model="data.hugeNumber"          name="myHugeNumber" 		required="">
+					<input type="text" placeholder="Adjective"           ng-model="data.adjective"           name="myAdjective" 		required="">
+				</div>
+				<button class="btn-generate" type="submit">Generate My Mad Lib</button>
+			</div>
+				
+			<!-- MadLib Generated Content -->
+			<div class="content" ng-hide="madLib">
+				<p>
+					<span class="name">{{data.firstName}}</span> was a <span>{{data.jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span>{{data.tediousTask}}</span> and <span>{{data.dirtyTask}}</span>. So, <span class="name">{{data.firstName}}</span> met with her life mentor <span class="name">{{data.celebrity}}</span> who told her to learn how to <span>{{data.uselessSkill}}</span> with Thinkful. 
+					<br>
+					Thinkful didn't offer a course on <span>{{data.uselessSkill}}</span> so she studied programming instead.
+				</p> 
+	 			<p>
+					What a great decision! With her new skills, <span class="name">{{data.firstName}}</span> built a(n) <span>{{data.adjective}}</span> robot named <span class="name">{{data.obnoxiousCelebrity}}</span> that not only loved <span>{{data.dirtyTask}}</span> but did it <span>{{data.hugeNumber | number}}</span> times faster. 
+				</p>
+				<button class="btn-start-over" type="reset" ng-click="startOver();">Start Over</button>
 			</div>
 		</form>
-		<div class="content">
-			<p>
-				<span class="name">{{firstName}}</span> was a <span>{{jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span class="name">{{firstName}}</span> met with her life mentor <span class="name">{{celebrity}}</span> who told her to learn how to <span>{{uselessSkill}}</span> with Thinkful. 
-				<br>
-				Thinkful didn't offer a course on <span>{{uselessSkill}}</span> so she studied programming instead.
-			</p> 
- 			<p>
-				What a great decision! With her new skills, <span class="name">{{firstName}}</span> built a(n) <span>{{adjective}}</span> robot named <span class="name">{{obnoxiousCelebrity}}</span> that not only loved <span>{{dirtyTask}}</span> but did it <span>{{hugeNumber | number}}</span> times faster. 
-			</p>
-		</div>
 	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
