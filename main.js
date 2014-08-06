@@ -43,7 +43,7 @@ angular.module('myApp', [])
         $scope.madLib = false;
       }
     };
-    // on click start over hide mad lib content, show inputs, and reset the form
+    // on click startover hide mad lib content, show inputs, and reset the form
     $scope.startOver = function(){
       // hide madLib content
       $scope.madLib = true; 
