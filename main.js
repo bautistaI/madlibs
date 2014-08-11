@@ -1,4 +1,4 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngAnimate'])
   .controller('LibsCtrl', function($scope){
     "use strict";
     $scope.words = [

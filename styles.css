@@ -71,9 +71,9 @@
 	border: 2px solid black;
 }
 .content{
-	margin-top: 20px;
 	padding: 10px 50px;
 	font-size: 18px;
+	position: relative;
 }
 .content span{
 	color: red;
@@ -101,4 +101,32 @@
 	padding: 5px 10px;
 	border-radius: 5px;
 }
+
+
+.animate-content.ng-hide-add,
+.animate-content.ng-hide-remove{
+	-webkit-transition: all 100ms ease-out;
+	   -moz-transition: all 100ms ease-out;
+	    -ms-transition: all 100ms ease-out;
+	     -o-transition: all 100ms ease-out;
+	        transition: all 100ms ease-out;
+	        opacity: 1;
+}
+.animate-content.ng-hide{
+	opacity: 0;
+}
+
+/*.animate-form.ng-hide-add,
+.animate-form.ng-hide-remove{
+	-webkit-transition: all 100ms ease-out;
+	   -moz-transition: all 100ms ease-out;
+	    -ms-transition: all 100ms ease-out;
+	     -o-transition: all 100ms ease-out;
+	        transition: all 100ms ease-out;
+	        opacity: 1;
+}
+.animate-form.ng-hide{
+	opacity: 0;
+}*/
+
 
