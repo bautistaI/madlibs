@@ -103,30 +103,23 @@
 }
 
 
-.animate-content.ng-hide-add,
+.animate-content.ng-hide-add{
+	-webkit-transition: all 0s ease-out;
+	   -moz-transition: all 0s ease-out;
+	    -ms-transition: all 0s ease-out;
+	     -o-transition: all 0s ease-out;
+	        transition: all 0s ease-out;
+	        opacity: 1;
+}
 .animate-content.ng-hide-remove{
-	-webkit-transition: all 100ms ease-out;
-	   -moz-transition: all 100ms ease-out;
-	    -ms-transition: all 100ms ease-out;
-	     -o-transition: all 100ms ease-out;
-	        transition: all 100ms ease-out;
+	-webkit-transition: all 1s ease-out;
+	   -moz-transition: all 1s ease-out;
+	    -ms-transition: all 1s ease-out;
+	     -o-transition: all 1s ease-out;
+	        transition: all 1s ease-out;
 	        opacity: 1;
 }
+
 .animate-content.ng-hide{
-	opacity: 0;
+	opacity: 0
 }
-
-/*.animate-form.ng-hide-add,
-.animate-form.ng-hide-remove{
-	-webkit-transition: all 100ms ease-out;
-	   -moz-transition: all 100ms ease-out;
-	    -ms-transition: all 100ms ease-out;
-	     -o-transition: all 100ms ease-out;
-	        transition: all 100ms ease-out;
-	        opacity: 1;
-}
-.animate-form.ng-hide{
-	opacity: 0;
-}*/
-
-
