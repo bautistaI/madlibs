@@ -71,9 +71,9 @@
 	border: 2px solid black;
 }
 .content{
-	margin-top: 20px;
 	padding: 10px 50px;
 	font-size: 18px;
+	position: relative;
 }
 .content span{
 	color: red;
@@ -102,3 +102,24 @@
 	border-radius: 5px;
 }
 
+
+.animate-content.ng-hide-add{
+	-webkit-transition: all 0s ease-out;
+	   -moz-transition: all 0s ease-out;
+	    -ms-transition: all 0s ease-out;
+	     -o-transition: all 0s ease-out;
+	        transition: all 0s ease-out;
+	        opacity: 1;
+}
+.animate-content.ng-hide-remove{
+	-webkit-transition: all 1s ease-out;
+	   -moz-transition: all 1s ease-out;
+	    -ms-transition: all 1s ease-out;
+	     -o-transition: all 1s ease-out;
+	        transition: all 1s ease-out;
+	        opacity: 1;
+}
+
+.animate-content.ng-hide{
+	opacity: 0
+}

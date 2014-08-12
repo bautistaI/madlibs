@@ -21,13 +21,9 @@
 		<!-- FORM -->
 		<form class="interaction" ng-controller="LibsCtrl" ng-submit='submitted=true; submit();' name="myForm">
 			<!-- Form Inputs -->
-			<div ng-hide="formInputs">
+			<div class="animate-form" ng-hide="formInputs">
 				<h2>Provide the following words:</h2>
 				<div class="info">
-					<!-- Not sure what I'm a doing wrong that I can't connect my model to the correct scope -->
-					<!-- <input type="text" ng-repeat="word in words" placeholder="{{word.placeholder}}" ng-model="word[0]"> -->
-
-					<!-- This is what I originally had, so now I'm trying to grab the contents from the object  -->
 					<input type="text" placeholder="female name"         ng-model="data.firstName"           name="myName" 					required="">
 					<input type="text" placeholder="Job Title"           ng-model="data.jobTitle"            name="myJobTitle" 			required="">
 					<input type="text" placeholder="Tedious task"        ng-model="data.tediousTask"         name="myTediousTask"		required="">
@@ -42,7 +38,7 @@
 			</div>
 				
 			<!-- MadLib Generated Content -->
-			<div class="content" ng-hide="madLib">
+			<div class="content animate-content" ng-hide="madLib">
 				<p>
 					<span class="name">{{data.firstName}}</span> was a <span>{{data.jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span>{{data.tediousTask}}</span> and <span>{{data.dirtyTask}}</span>. So, <span class="name">{{data.firstName}}</span> met with her life mentor <span class="name">{{data.celebrity}}</span> who told her to learn how to <span>{{data.uselessSkill}}</span> with Thinkful. 
 					<br>
@@ -55,8 +51,8 @@
 			</div>
 		</form>
 	</div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script src="animate.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
