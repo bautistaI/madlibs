@@ -12,17 +12,7 @@ angular.module('myApp', ['ngAnimate'])
     {word: 'hugeNumber', placeholder:'huge number'},
     {word: 'adjective', placeholder:'adjective'}
     ];
-    // This is how I did it before by putting every model into a specific scope
-    // $scope.firstName = '';
-    // $scope.jobTitle = '';
-    // $scope.tediousTask = '';
-    // $scope.dirtyTask = '';
-    // $scope.celebrity = '';
-    // $scope.uselessSkill = '';
-    // $scope.obnoxiousCelebrity = '';
-    // $scope.hugeNumber = '';
-    // $scope.adjective = '';
-    // hide mad lib content initially, that way I don't use ng-if="submitted"
+    
     $scope.madLib = true;
 
     $scope.submit = function(){
